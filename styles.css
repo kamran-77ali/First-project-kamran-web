@@ -37,7 +37,7 @@ body {
 
 .hamburger i {
     font-size: 24px;
-    align-items:left;
+    align-items:right;
 }
 
 /* Sidebar (hidden by default) */
