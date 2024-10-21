@@ -12,7 +12,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: right;
     background-color: #333;
     padding: 1em;
     color: white;
@@ -20,7 +20,7 @@ body {
 
 .navbar-center, .navbar-right {
     display: flex;
-    align-items: left;
+    align-items: right;
 }
 
 .navbar-center a, .navbar-right a, .navbar-search input, .navbar-search button {
