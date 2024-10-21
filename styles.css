@@ -8,124 +8,81 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* General navbar styling */
+/* Basic styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
     background-color: #333;
-    color: #fff;
-    position: relative;
-}
-
-.logo {
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar-center a, .navbar-right a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0px 10px ;
-}
-
-.navbar-search {
-    display: flex;
-    align-items: center;
-    margin-left: 150px;
-}
-
-.navbar-search input {
-    padding: 5px;
-    border-radius: 4px;
-    border: none;
-}
-
-.navbar-search button {
-    background-color: #555;
+    padding: 1em;
     color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
-/* Hamburger button for mobile */
-.hamburger {
+.navbar-center, .navbar-right {
     display: flex;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Sidebar styling */
-#navbarMenu {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
 }
 
-#navbarMenu.active {
+.navbar-center a, .navbar-right a, .navbar-search input, .navbar-search button {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Hamburger styling */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+}
+
+/* Sidebar (hidden by default) */
+.sidebar {
+    height: 100%;
+    width: 0;
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 100%;
     background-color: #333;
-    flex-direction: column;
-    justify-content: flex-start;
+    overflow-x: hidden;
+    transition: 0.5s;
     padding-top: 60px;
-    z-index: 1000;
 }
 
-#navbarMenu a {
-    padding: 10px;
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
     display: block;
-    text-align: left;
-    width: 100%;
+    transition: 0.3s;
 }
 
-#navbarMenu .navbar-search {
-    width: 90%;
-    margin: 15px auto;
+.sidebar a:hover {
+    background-color: #575757;
 }
 
-/* Hide icons and menu on mobile by default */
-#navbarIcons {
-    display: flex;
-    align-items: center;
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
 }
 
-#navbarIcons a {
-    margin: 0 10px;
-}
-
-/* Mobile-specific styles */
+/* Responsive design for mobile */
 @media (max-width: 768px) {
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .navbar-center {
-        display: none;
-    }
-
-    .navbar-right {
+    .navbar-center, .navbar-search, .navbar-right {
         display: none;
     }
 
     .hamburger {
-        display: nonek;
-    }
-
-    /* Sidebar shows when active */
-    #navbarMenu.active {
-        display: flex;
+        display: block;
     }
 }
+
 /* Banner styles */
 .banner img {
     width: 100%;
