@@ -12,7 +12,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: right;
+    align-items: center;
     background-color: #333;
     padding: 1em;
     color: white;
@@ -27,12 +27,14 @@ body {
     color: white;
     margin-left: 15px;
     text-decoration: none;
+    align-items: right;
 }
 
 /* Hamburger styling */
 .hamburger {
     display: none;
     cursor: pointer;
+    align-items: left;
 }
 
 .hamburger i {
