@@ -335,6 +335,7 @@ body {
     color: #333;
 }
 
+/* Grid layout will stack on small screens */
 .testimonial-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -368,8 +369,9 @@ blockquote {
     font-weight: bold;
     color: #333;
 }
-  /* Contact Us Section */
-  .contact {
+
+/* Contact Us Section */
+.contact {
     padding: 50px;
     text-align: center;
     background-color: #f4f4f4;
@@ -401,6 +403,36 @@ blockquote {
     cursor: pointer;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Testimonials Section */
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Stack testimonials on smaller screens */
+        gap: 10px; /* Smaller gap on mobile */
+    }
+
+    .testimonial {
+        padding: 15px; /* Smaller padding for mobile */
+    }
+
+    .testimonials h2 {
+        font-size: 24px; /* Reduce font size for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .testimonial-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    blockquote {
+        font-size: 14px; /* Reduce blockquote font size for mobile */
+    }
+
+    .client-name {
+        font-size: 14px;
+    }
 /* Footer */
 footer {
     background-color: #333;
