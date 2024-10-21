@@ -20,7 +20,7 @@ body {
 
 .navbar-center, .navbar-right {
     display: flex;
-    align-items: right;
+    align-items: left;
 }
 
 .navbar-center a, .navbar-right a, .navbar-search input, .navbar-search button {
@@ -37,6 +37,7 @@ body {
 
 .hamburger i {
     font-size: 24px;
+    align-items:left;
 }
 
 /* Sidebar (hidden by default) */
