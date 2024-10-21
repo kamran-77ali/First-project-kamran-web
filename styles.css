@@ -8,24 +8,15 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* General navbar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     background-color: #333;
     color: #fff;
-}
-
-.navbar-left, .navbar-right {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-center {
-    display: flex;
-    justify-content: center;
-    flex: 1;
+    position: relative;
 }
 
 .logo {
@@ -35,91 +26,104 @@ body {
     font-weight: bold;
 }
 
-.navbar-center a, .navbar-left a, .navbar-right a {
+.navbar-center a, .navbar-right a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0px 10px ;
 }
 
-.navbar-center a:hover, .navbar-left a:hover, .navbar-right a:hover {
-    color: #ddd;
-}
-
-.social-icon {
-    font-size: 18px;
-}
-
-.social-icon i {
-    margin-right: 10px;
-}
-
-.navbar-center a {
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-
-.navbar-center a:hover {
-    background-color: #555;
-}
-
-/* Make navbar responsive */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-    
-    .navbar-left, .navbar-right {
-        justify-content: center;
-        margin: 10px 0;
-    }
-    
-    .navbar-center {
-        order: -1;
-    }
-}
-/* Search bar styles */
 .navbar-search {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-left: 150px;
 }
 
 .navbar-search input {
-    padding: 5px 10px;
+    padding: 5px;
     border-radius: 4px;
-    border: 1px solid #555;
-    background-color: #fff;
-    color: #333;
-    margin-right: 5px;
+    border: none;
 }
 
 .navbar-search button {
     background-color: #555;
-    border: none;
+    color: white;
     padding: 5px 10px;
+    border: none;
     cursor: pointer;
     border-radius: 4px;
-    color: #fff;
 }
 
-.navbar-search button:hover {
-    background-color: #444;
+/* Hamburger button for mobile */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-/* Make navbar responsive */
+/* Sidebar styling */
+#navbarMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbarMenu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+#navbarMenu a {
+    padding: 10px;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+#navbarMenu .navbar-search {
+    width: 90%;
+    margin: 15px auto;
+}
+
+/* Hide icons and menu on mobile by default */
+#navbarIcons {
+    display: flex;
+    align-items: center;
+}
+
+#navbarIcons a {
+    margin: 0 10px;
+}
+
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        justify-content: space-between;
     }
-    
-    .navbar-left, .navbar-right, .navbar-search {
-        justify-content: center;
-        margin: 10px 0;
-    }
-    
+
     .navbar-center {
-        order: -1;
+        display: none;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Sidebar shows when active */
+    #navbarMenu.active {
+        display: flex;
     }
 }
 /* Banner styles */
