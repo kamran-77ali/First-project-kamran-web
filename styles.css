@@ -55,7 +55,7 @@ body {
 
 /* Hamburger button for mobile */
 .hamburger {
-    display: none;
+    display: flex;
     font-size: 24px;
     cursor: pointer;
 }
@@ -118,7 +118,7 @@ body {
     }
 
     .hamburger {
-        display: block;
+        display: nonek;
     }
 
     /* Sidebar shows when active */
